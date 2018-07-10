@@ -1,6 +1,7 @@
 class UI {
   constructor() {
     this.container = document.querySelector(".news-container .container .row");
+    this.row = document.querySelector(".container");
   }
   addNews(news) {
     const template = `
@@ -77,6 +78,19 @@ class UI {
     `;
 
     this.container.insertAdjacentHTML("beforeend", template);
+  }
+
+  formError(err){
+    const template = `
+      <div class="card red lighten-1">
+        <div class="card-content">
+            <span class="card-title">Error:</span>
+            <p>${err}</p>
+        </div>
+      </div>
+    `;
+
+    this.row.insertAdjacentHTML("beforeend", template);
   }
 }
 

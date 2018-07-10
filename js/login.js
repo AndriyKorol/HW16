@@ -1,5 +1,7 @@
 //auth init
 const auth = new Auth();
+// Init UI
+const ui = new UI();
 
 //init elements from form
 const form = document.forms['login-form'];
@@ -20,18 +22,16 @@ signup.addEventListener("click", signUp);
 function onLogin(e) {
     e.preventDefault();
 
-    if (email.value && password.value){
+    if (email.value && password.value || !email.value || !password.value){
         auth.login(email.value, password.value)
             .then(() => {
                 window.location = "index.html";
             })
-            .catch((err) => {
-                //show error
-                console.log(err);
-            })
+            .catch((err) => { return ui.formError(err) });
     }
-
+    document.forms['login-form'].reset();
 }
+
 function signUp() {
     window.location = 'sign-up.html'
 }

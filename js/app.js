@@ -74,7 +74,7 @@ function pars(url) {
             // перебираем новости из поля articles в объекте response
             response.articles.forEach(news => ui.addNews(news))
         })
-        .catch((err)=>{return ui.showError(err); });
+        .catch((err)=>{return ui.showError(err) });
     document.forms['searching'].reset();
 }
 
