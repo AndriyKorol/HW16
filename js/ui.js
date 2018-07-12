@@ -72,7 +72,7 @@ class UI {
       <div class="card red lighten-1">
         <div class="card-content">
             <span class="card-title">Error:</span>
-            <p>${err}</p>
+            <p>"Невірно заповнені поля пошуку"</p>
         </div>
       </div>
     `;
