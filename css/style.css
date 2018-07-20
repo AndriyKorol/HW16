@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 .header {
     display: flex;
     justify-content:  flex-end;
     margin: 10px 15px;
+=======
+.header {
+    display: flex;
+    justify-content:  flex-end;
+    margin: 10px 15px;
+>>>>>>> a3e23470f25f907f94c6d47b9d01040bbcb6d97a
 }
